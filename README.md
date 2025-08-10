@@ -1,22 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Eskalate Full Stack Assessment - Frontend Implementation
+
+## Implementation Path
+
+**Path B (Frontend-Focused)**: This project focuses on building a pixel-perfect frontend based on the Figma design. The implementation includes:
+
+- ✅ **Header Component** with complex logo design and hero section
+- ✅ **Featured Restaurant Section** with restaurant cards and ratings
+- ✅ **Newsletter Subscription** with interactive form
+- ✅ **Footer Component** with company information and social links
+- ✅ **Responsive Design** following Figma specifications
+- ✅ **Interactive Elements** with proper hover states and functionality
+
+## Tech Stack
+
+- **Next.js 15.4.6** with App Router
+- **React 19.1.0** with TypeScript
+- **Tailwind CSS 4** for styling
+- **Google Fonts** (Source Sans Pro & Open Sans)
+
+## Features Implemented
+
+### 🎨 **Figma Design Compliance**
+
+- Exact color matching (#FFB30E, #F17228, #212121, etc.)
+- Precise typography with Source Sans Pro and Open Sans
+- Proper spacing, shadows, and gradient effects
+- Complex logo design with multiple layered elements
+
+### 🏗️ **Component Architecture**
+
+- Reusable and modular components
+- Proper TypeScript interfaces
+- Clean separation of concerns
+- Accessibility best practices
+
+### 📱 **Responsive Design**
+
+- Mobile-first approach
+- Flexible layouts with proper breakpoints
+- Optimized images with Next.js Image component
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3002](http://localhost:3002) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+
+```typescript
+src/
+├── app/
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx           # Homepage
+├── components/
+│   ├── Header.tsx         # Top navigation and hero
+│   ├── FeaturedRestaurants.tsx  # Restaurant grid
+│   └── Footer.tsx         # Footer with links
+└── types/
+    └── index.ts           # TypeScript interfaces
+```
+
+## Design Implementation
+
+The implementation closely follows the provided Figma design with:
+
+- **Full-width sections** with proper centering
+- **Gradient backgrounds** and shadow effects
+- **Interactive elements** with proper states
+- **Typography hierarchy** matching design specs
+- **Color consistency** throughout the application
+
+## Assessment Compliance
+
+This implementation meets the assessment requirements by:
+
+- ✅ Following the **Path B** approach (frontend-focused)
+- ✅ Using **descriptive component names** and proper structure
+- ✅ Implementing **semantic HTML** with accessibility
+- ✅ Creating **reusable components** with clean code
+- ✅ Using **TypeScript** for type safety
+- ✅ Following **Next.js best practices**
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
