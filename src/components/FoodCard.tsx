@@ -1,19 +1,22 @@
+import Image from 'next/image';
 import { Food } from '@/types';
 
 interface FoodCardProps {
-  food: Food;
-  onEdit: () => void;
-  onDelete: () => void;
+  readonly food: Food;
+  readonly onEdit: () => void;
+  readonly onDelete: () => void;
 }
 
-export default function FoodCard({ food, onEdit, onDelete }: FoodCardProps) {
+export default function FoodCard({ food, onEdit, onDelete }: Readonly<FoodCardProps>) {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative h-48">
-        <img
+        <Image
           src={food.imageUrl}
           alt={food.name}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-2 right-2 flex gap-2">
           <button
