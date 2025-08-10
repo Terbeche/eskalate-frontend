@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Restaurant, Meal } from '@/types';
+import { Meal } from '@/types';
 import config from '@/config';
 import MealCard from './MealCard';
 import AddMealModal from './AddMealModal';
@@ -9,7 +9,6 @@ import EditMealModal from './EditMealModal';
 import DeleteMealModal from './DeleteMealModal';
 
 export default function MealManagement() {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
   const [meals, setMeals] = useState<Meal[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedMeal, setSelectedMeal] = useState<Meal | null>(null);
@@ -17,13 +16,14 @@ export default function MealManagement() {
   const [showEditModal, setShowEditModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-  // Fetch restaurants
+  // Fetch restaurants (for future use)
   const fetchRestaurants = async () => {
     try {
       const response = await fetch(`${config.app.apiUrl}/restaurants/`);
       if (response.ok) {
         const data = await response.json();
-        setRestaurants(data);
+        // Store restaurants data if needed in the future
+        console.log('Restaurants loaded:', data.length);
       }
     } catch (error) {
       console.error('Error fetching restaurants:', error);
@@ -153,10 +153,12 @@ export default function MealManagement() {
 
   // Expose addMeal function to parent component
   useEffect(() => {
-    (window as any).openAddMealModal = handleAddMeal;
-    return () => {
-      delete (window as any).openAddMealModal;
-    };
+    if (typeof window !== 'undefined') {
+      window.openAddMealModal = handleAddMeal;
+      return () => {
+        delete window.openAddMealModal;
+      };
+    }
   }, []);
 
   if (loading) {

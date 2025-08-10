@@ -1,17 +1,21 @@
 'use client';
 
-import { useRef } from 'react';
 import Header from '@/components/Header';
 import MealManagement from '@/components/MealManagement';
 import Footer from '@/components/Footer';
 
-export default function Home() {
-  const mealManagementRef = useRef<{ handleAddMeal: () => void } | null>(null);
+// Extend Window interface to include our custom function
+declare global {
+  interface Window {
+    openAddMealModal?: () => void;
+  }
+}
 
+export default function Home() {
   const handleAddMeal = () => {
     // Use the global window function to open the add meal modal
-    if (typeof window !== 'undefined' && (window as any).openAddMealModal) {
-      (window as any).openAddMealModal();
+    if (typeof window !== 'undefined' && window.openAddMealModal) {
+      window.openAddMealModal();
     }
   };
 
