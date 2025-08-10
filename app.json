@@ -1,0 +1,28 @@
+{
+  "name": "Eskalate Food Frontend",
+  "description": "Next.js frontend for food management system",
+  "keywords": ["nextjs", "react", "food", "frontend"],
+  "website": "https://github.com/Terbeche/eskalate-frontend",
+  "repository": "https://github.com/Terbeche/eskalate-frontend",
+  "env": {
+    "NEXT_PUBLIC_API_URL": {
+      "description": "Backend API URL",
+      "required": true
+    },
+    "NEXT_PUBLIC_APP_NAME": {
+      "description": "Application name",
+      "value": "FoodWagen"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
