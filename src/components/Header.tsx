@@ -47,12 +47,6 @@ export default function Header({ onAddMeal }: Readonly<HeaderProps>) {
               <span className="font-semibold">Add Meal</span>
             </button>
           )}
-
-          {/* Login Button */}
-          <button className="flex flex-row justify-center items-center px-6 py-2 gap-2 bg-white shadow-md rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
-            <span className="text-orange-500">👤</span>
-            <span className="text-orange-500 font-semibold">Login</span>
-          </button>
         </div>
       </nav>
 
@@ -62,17 +56,17 @@ export default function Header({ onAddMeal }: Readonly<HeaderProps>) {
         <div className="absolute left-[220px] top-[132px] flex flex-col gap-8 w-[856px] h-[355.44px]">
           {/* Title */}
           <div className="flex flex-col justify-center gap-[15px] w-[666px] h-[129px]">
-            <h1 
+            <p 
               className="w-[666px] h-[88px] text-white leading-[100%]"
               style={{
                 fontFamily: 'Source Sans Pro',
                 fontWeight: 700,
-                fontSize: '88px',
+                fontSize: '60px',
                 textShadow: '0px 14px 15px rgba(255, 174, 0, 0.01), 0px 27px 82px rgba(255, 174, 0, 0.28)'
               }}
             >
               Are you starving?
-            </h1>
+            </p>
             <p 
               className="w-[532px] h-[26px] text-white leading-[120%]"
               style={{

@@ -143,13 +143,6 @@ export default function AddMealModal({ isOpen, onClose, onAdd }: AddMealModalPro
           >
             Cancel
           </button>
-          <button
-            onClick={handleAdd}
-            disabled={!newMeal.name || newMeal.price <= 0}
-            className="flex-1 px-4 py-2 text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
-          >
-            Add Meal
-          </button>
         </div>
       </div>
     </div>

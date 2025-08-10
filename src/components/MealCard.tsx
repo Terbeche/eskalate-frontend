@@ -157,13 +157,6 @@ export default function MealCard({ meal, onEdit, onDelete }: MealCardProps) {
           <span className="text-xl font-bold text-gray-900">
             ${meal.price.toFixed(2)}
           </span>
-          
-          <button 
-            className="px-4 py-2 bg-orange-500 text-white text-sm font-semibold rounded-lg hover:bg-orange-600 transition-colors"
-            aria-label={`Add ${meal.name} to cart`}
-          >
-            Add Meal
-          </button>
         </div>
       </div>
     </div>
