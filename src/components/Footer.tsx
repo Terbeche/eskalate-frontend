@@ -161,7 +161,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <span style={{ fontFamily: 'var(--font-open-sans)' }} className="text-[#F5F5F5] leading-[120%]">Made with ❤️ by</span>
             <span style={{ fontFamily: 'var(--font-open-sans)' }} className="text-[#F5F5F5] font-bold leading-[120%]">
-              Eskalate
+              Mostefa Terbche
             </span>
           </div>
         </div>
